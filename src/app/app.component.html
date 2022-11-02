@@ -1,0 +1,48 @@
+<div *ngIf="!playGame && !gameService.gameEnd">
+  <div class="game-body" #container>
+    <div class="nation japanse" *ngFor="let nation of nations" (click)="!this.gameService.processingAnswer ? submitAnswer(nation) : false">
+      <p>{{nation.name}}</p>
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+      Toal Points: {{totalPoints}}
+    </p>
+  </div>
+</div>
+
+<!--<div class="image" cdkDrag *ngIf="!playGame">-->
+
+<!--</div>-->
+
+<app-img-card *ngIf="!playGame"></app-img-card>
+
+
+
+  <div class="playGame" (click)="startGame()" *ngIf="playGame">
+    <p>
+    Play Game
+    </p>
+  </div>
+
+<div class="playGame" *ngIf="gameService.gameEnd">
+  <p>
+    Total Points : {{totalPoints}}
+  </p>
+</div>
+<div class="playGame" (click)="startGame()" *ngIf="gameService.gameEnd">
+  <p>
+    Play Again
+  </p>
+</div>
+
+
+<!--  <div *ngFor="let image of localImages">-->
+<!--    <img src="{{'data:image/png;base64,' + image.imageData}}"  width="100" height="100" />-->
+<!--  </div>-->
+
+
+<!--  <app-img-card [imgs]="imgs"></app-img-card>-->
+
+
+  <!--<router-outlet></router-outlet>-->

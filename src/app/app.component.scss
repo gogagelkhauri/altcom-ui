@@ -1,0 +1,107 @@
+
+.game-body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+
+.nation{
+  border: 1px solid black;
+  height: 40vh;
+  padding: 10px;
+  display: table;
+  border-radius: 6px;
+}
+
+.nation > p {
+  text-align:center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.nation:hover{
+  background-color: azure;
+}
+
+.japanse{
+  background-color: crimson;
+}
+
+//.chinese{
+//  background-color: #D3260F;
+//}
+//
+//.korean{
+//  background-color: #013072;
+//}
+//
+//
+//.thai{
+//  background-color: #C80200;
+//}
+.footer{
+  width: 1fr;
+  height: 10vh;
+  border: 1px solid black;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.footer:hover{
+  background-color: beige;
+}
+//
+//.main-conatiner{
+//  z-index: 0;
+//}
+
+.image{
+  width: 200px;
+  height: 300px;
+  background-color: bisque;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  //bottom: 930px;
+  border-radius: 9px;
+
+  animation-name: MoveImage;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.playGame{
+  display: table;
+  width: 100px;
+  height: 50px;
+  background-color: #3f9f32;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  bottom: -400px;
+  border-radius: 9px;
+  cursor: pointer;
+  color: white;
+}
+
+.playGame:hover{
+  background-color: #249117;
+}
+
+.playGame > p {
+  text-align:center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+@keyframes MoveImage {
+  from {
+    bottom: 930px;
+  }
+  to {
+    bottom: 700px;
+  }
+}
